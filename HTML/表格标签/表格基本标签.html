@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 以+列的单元格展示数据 
+    table: 表格整体
+    tr: 表格每一行
+    td: 表格单元格
+    嵌套: table > tr > td -->
+    <!--(写在table中)border: 边框宽度
+    width: 表格宽度
+    height: 表格高度
+    实际开发推荐使用css -->
+    <!-- caption: 表格大标题
+    th: 表头单元格 表格一列的小标题 
+    caption 写在table标签内部
+    th 写在tr标签内部-->
+    <!-- 合并单元格: 留左上原则
+    rowspan: 跨行合并
+    colspan: 跨列合并 
+    不能跨结构标签(thead/tbody/tfoot)合并-->
+    <table border="1" width="300" height="300">
+        <caption><h3>学生成绩单</h3></caption>
+        <tr>
+            <th>姓名</th>
+            <th>成绩</th>
+            <th>评语</th>
+        </tr>  
+        <tr>
+            <td>一</td>
+            <!-- 保留 -->
+            <td rowspan="2">100</td>
+            <td>牛</td>
+        </tr>
+        <tr>
+            <td>二</td>
+            <!-- 删除 -->
+            <!-- <td>100</td> -->
+            <!-- 保留 -->
+            <td>牛</td>
+        </tr>  
+        <tr>
+            <td>总结</td>
+            <!-- 删除 -->
+            <td colspan="2">牛</td> 
+            <!-- <td>牛</td>  -->
+        </tr>
+    </table>
+</body>
+</html>
